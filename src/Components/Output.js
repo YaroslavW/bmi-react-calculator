@@ -21,10 +21,15 @@ class Output extends Component {
     let bmi = this.props.data.bmi;
     let bmiClass = this.props.data.bmiClass;
 
+    let m_height = this.props.data.height
+    let m_weight = this.props.data.weight
+
     return (
       <div className="output">
-        <h3>{height}</h3>
-        <h3>{weight}lbs</h3>
+        <h3>{height} Feet</h3>
+        <h3>{m_height} Сm</h3>
+        <h3>{weight} lbs</h3>
+        <h3>{m_weight} Kg</h3>
         <h3>{bmi}</h3>
         <h3 className={(this.props.data.bmiClass === "Obese") ? "danger" : ""}>{bmiClass} {(this.props.data.bmiClass === "Obese") ? <a href='http://someproductsite.com'>What Can i Do?</a> : ""}</h3>
       </div>
